@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 5,
+			"revision" : 9,
 			"architecture" : "x86"
 		}
 ,
@@ -29,23 +29,37 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-11",
-					"maxclass" : "meter~",
+					"id" : "obj-2",
+					"maxclass" : "live.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
-					"outlettype" : [ "float" ],
-					"patching_rect" : [ 315.0, 630.0, 80.0, 13.0 ]
+					"orientation" : 1,
+					"outlettype" : [ "list" ],
+					"patching_rect" : [ 195.0, 555.0, 75.0, 15.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-1",
+					"maxclass" : "live.meter~",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"orientation" : 1,
+					"outlettype" : [ "list" ],
+					"patching_rect" : [ 15.0, 555.0, 75.0, 15.0 ]
 				}
 
 			}
 , 			{
 				"box" : 				{
 					"id" : "obj-10",
-					"maxclass" : "meter~",
+					"maxclass" : "live.meter~",
 					"numinlets" : 1,
 					"numoutlets" : 1,
-					"outlettype" : [ "float" ],
-					"patching_rect" : [ 195.0, 75.0, 210.0, 45.0 ]
+					"orientation" : 1,
+					"outlettype" : [ "list" ],
+					"patching_rect" : [ 75.0, 60.0, 60.0, 20.0 ]
 				}
 
 			}
@@ -58,8 +72,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 8,
 					"outlettype" : [ "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal" ],
-					"patching_rect" : [ 150.0, 480.0, 120.0, 135.0 ],
-					"presentation_rect" : [ 152.0, 417.0, 0.0, 0.0 ]
+					"patching_rect" : [ 150.0, 405.0, 120.0, 135.0 ]
 				}
 
 			}
@@ -71,7 +84,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 2,
 					"numoutlets" : 0,
-					"patching_rect" : [ 15.0, 630.0, 255.0, 20.0 ],
+					"patching_rect" : [ 105.0, 555.0, 57.0, 20.0 ],
 					"text" : "dac~ 1 2"
 				}
 
@@ -85,22 +98,23 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 11.0, 45.0, 47.0, 20.0 ],
+					"patching_rect" : [ 15.0, 60.0, 47.0, 20.0 ],
 					"text" : "adc~ 1"
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"fontface" : 1,
 					"fontname" : "Arial",
-					"fontsize" : 12.0,
+					"fontsize" : 14.0,
 					"frgb" : 0.0,
 					"id" : "obj-6",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 11.0, 10.0, 150.0, 20.0 ],
-					"text" : "MODULAR  v1.0"
+					"patching_rect" : [ 15.0, 15.0, 177.0, 22.0 ],
+					"text" : "CENTRAL IN/OUT HUB"
 				}
 
 			}
@@ -113,7 +127,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 8,
 					"outlettype" : [ "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal" ],
-					"patching_rect" : [ 15.0, 480.0, 120.0, 135.0 ]
+					"patching_rect" : [ 15.0, 405.0, 120.0, 135.0 ]
 				}
 
 			}
@@ -125,16 +139,79 @@
 					"name" : "cs.2click-outputs.maxpat",
 					"numinlets" : 8,
 					"numoutlets" : 0,
-					"patching_rect" : [ 13.0, 75.0, 122.0, 135.0 ]
+					"patching_rect" : [ 15.0, 105.0, 120.0, 135.0 ]
 				}
 
 			}
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
-					"destination" : [ "obj-11", 0 ],
+					"destination" : [ "obj-1", 0 ],
 					"disabled" : 0,
-					"hidden" : 0,
+					"hidden" : 1,
+					"source" : [ "obj-4", 7 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-1", 0 ],
+					"disabled" : 0,
+					"hidden" : 1,
+					"source" : [ "obj-4", 6 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-1", 0 ],
+					"disabled" : 0,
+					"hidden" : 1,
+					"source" : [ "obj-4", 5 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-1", 0 ],
+					"disabled" : 0,
+					"hidden" : 1,
+					"source" : [ "obj-4", 4 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-1", 0 ],
+					"disabled" : 0,
+					"hidden" : 1,
+					"source" : [ "obj-4", 3 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-1", 0 ],
+					"disabled" : 0,
+					"hidden" : 1,
+					"source" : [ "obj-4", 2 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-1", 0 ],
+					"disabled" : 0,
+					"hidden" : 1,
+					"source" : [ "obj-4", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-1", 0 ],
+					"disabled" : 0,
+					"hidden" : 1,
 					"source" : [ "obj-4", 0 ]
 				}
 
@@ -216,6 +293,7 @@
 					"destination" : [ "obj-10", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
+					"midpoints" : [ 24.5, 85.0, 67.5, 85.0, 67.5, 52.0, 84.5, 52.0 ],
 					"source" : [ "obj-7", 0 ]
 				}
 
@@ -294,6 +372,78 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-2", 0 ],
+					"disabled" : 0,
+					"hidden" : 1,
+					"source" : [ "obj-9", 7 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-2", 0 ],
+					"disabled" : 0,
+					"hidden" : 1,
+					"source" : [ "obj-9", 6 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-2", 0 ],
+					"disabled" : 0,
+					"hidden" : 1,
+					"source" : [ "obj-9", 5 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-2", 0 ],
+					"disabled" : 0,
+					"hidden" : 1,
+					"source" : [ "obj-9", 4 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-2", 0 ],
+					"disabled" : 0,
+					"hidden" : 1,
+					"source" : [ "obj-9", 3 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-2", 0 ],
+					"disabled" : 0,
+					"hidden" : 1,
+					"source" : [ "obj-9", 2 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-2", 0 ],
+					"disabled" : 0,
+					"hidden" : 1,
+					"source" : [ "obj-9", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-2", 0 ],
+					"disabled" : 0,
+					"hidden" : 1,
+					"source" : [ "obj-9", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-8", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -367,36 +517,36 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "cs.2click-outputs.maxpat",
-				"bootpath" : "/Volumes/Studio Transfer/music264-spring-2015/students/chris-swithinbank/cs.2click/lib",
-				"patcherrelativepath" : "../chris-swithinbank/cs.2click/lib",
+				"bootpath" : "/Users/chris/Desktop/desktop/Max/music264-spring-2015/students/chris-swithinbank/cs.2click/lib",
+				"patcherrelativepath" : "../students/chris-swithinbank/cs.2click/lib",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "cs.2click.js",
-				"bootpath" : "/Volumes/Studio Transfer/music264-spring-2015/students/chris-swithinbank/cs.2click/lib",
-				"patcherrelativepath" : "../chris-swithinbank/cs.2click/lib",
+				"bootpath" : "/Users/chris/Desktop/desktop/Max/music264-spring-2015/students/chris-swithinbank/cs.2click/lib",
+				"patcherrelativepath" : "../students/chris-swithinbank/cs.2click/lib",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "cs.2click-send~.maxpat",
-				"bootpath" : "/Volumes/Studio Transfer/music264-spring-2015/students/chris-swithinbank/cs.2click/lib",
-				"patcherrelativepath" : "../chris-swithinbank/cs.2click/lib",
+				"bootpath" : "/Users/chris/Desktop/desktop/Max/music264-spring-2015/students/chris-swithinbank/cs.2click/lib",
+				"patcherrelativepath" : "../students/chris-swithinbank/cs.2click/lib",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "cs.2click-inputs.maxpat",
-				"bootpath" : "/Volumes/Studio Transfer/music264-spring-2015/students/chris-swithinbank/cs.2click/lib",
-				"patcherrelativepath" : "../chris-swithinbank/cs.2click/lib",
+				"bootpath" : "/Users/chris/Desktop/desktop/Max/music264-spring-2015/students/chris-swithinbank/cs.2click/lib",
+				"patcherrelativepath" : "../students/chris-swithinbank/cs.2click/lib",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "cs.2click-receive~.maxpat",
-				"bootpath" : "/Volumes/Studio Transfer/music264-spring-2015/students/chris-swithinbank/cs.2click/lib",
-				"patcherrelativepath" : "../chris-swithinbank/cs.2click/lib",
+				"bootpath" : "/Users/chris/Desktop/desktop/Max/music264-spring-2015/students/chris-swithinbank/cs.2click/lib",
+				"patcherrelativepath" : "../students/chris-swithinbank/cs.2click/lib",
 				"type" : "JSON",
 				"implicit" : 1
 			}
