@@ -510,7 +510,7 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "mic-in", 8 ],
+					"args" : [ "mic-in-2", 8 ],
 					"id" : "obj-10",
 					"maxclass" : "bpatcher",
 					"name" : "cs.2click-outputs.maxpat",
@@ -1153,7 +1153,7 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "mic-in", 8 ],
+					"args" : [ "mic-in-1", 8 ],
 					"id" : "obj-3",
 					"maxclass" : "bpatcher",
 					"name" : "cs.2click-outputs.maxpat",
@@ -1641,10 +1641,10 @@
  ],
 		"parameters" : 		{
 			"obj-16" : [ "live.gain~[3]", "live.gain~", 0 ],
+			"obj-1::obj-1::obj-9" : [ "live.gain~", "live.gain~", 0 ],
 			"obj-17" : [ "live.gain~[2]", "live.gain~", 0 ],
 			"obj-1::obj-2::obj-36" : [ "live.gain~[1]", "live.gain~", 0 ],
-			"obj-1::obj-2::obj-4" : [ "slot-num", "live.tab", 0 ],
-			"obj-1::obj-1::obj-9" : [ "live.gain~", "live.gain~", 0 ]
+			"obj-1::obj-2::obj-4" : [ "slot-num", "live.tab", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
